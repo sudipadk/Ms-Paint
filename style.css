@@ -5,6 +5,11 @@
     font-family: sans-serif;
 }
 
+html{
+    background-color: #e5e5e5;
+
+}
+
 
 header {
     width: 100vw;
@@ -14,7 +19,6 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 8px;
-    
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
@@ -279,26 +283,36 @@ header {
 
 /* draw garnae frame create gareko */
 
-#myCanvas{
-    margin-top: 100px;
-    width: 100%;
-    height: 100%;
-    border: 10px solid white;
-    background-color: black;
+canvas {
+    border: 1px solid #000;
     cursor: crosshair;
-
 }
 
-footer{
+.tools {
+    margin-top: 10px;
+}
+
+
+/* Basic styling for the footer */
+footer {
+    background-color: #F0F0F0;
+    border-top: 1px solid #E0E0E0;
+    color: #888;
     display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100px;
-    background-color: yellow;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    font-size: 14px;
 }
 
-.footer p{
-    background-color: red;
-    width: 100%;
-    height: 100%;
+/* Styling for the links in the footer */
+footer a {
+    color: #888;
+    text-decoration: none;
+}
+
+/* Change the color of the link when hovering over it */
+footer a:hover {
+    color: #444;
+    text-decoration: underline;
 }
