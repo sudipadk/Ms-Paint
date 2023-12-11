@@ -203,13 +203,17 @@ header {
     color: black;
 }
 
-.tools .material-icons{
+.tools i{
     border: 1px solid rgba(0, 0, 0,0.2);
     padding: 8px;
     width: 48px;
     height: 40px;
 }
 
+.bi-pencil{
+    width: 28px;
+    height: 28px;
+}
 .matrix-brush {
     display: none;
     grid-template-columns: repeat(3, 1fr);
@@ -254,7 +258,7 @@ header {
 /* color palette */
 
 .color-container {
-    margin-top: 4px;
+    margin-top: 10px;
     width: 205px;
     display: grid;
     gap: 2px;
@@ -269,8 +273,7 @@ p{
     border-radius: 50%;
     width: 24px;
     height: 24px;
-    /* gap: 5px; */
-    /* margin: 0px; */
+    
 
 }
 
