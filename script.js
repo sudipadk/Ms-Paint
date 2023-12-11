@@ -43,4 +43,50 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const canvas = document.getElementById("drawingCanvas");
+    const ctx = canvas.getContext("2d");
 
+    let isDrawing = false;
+    let currentTool = "pencil";
+
+    function startDrawing(e) {
+        isDrawing = true;
+        draw(e);
+    }
+
+    function stopDrawing() {
+        isDrawing = false;
+       
+    }
+
+    function draw(e) {
+        if (!isDrawing) return;
+
+        ctx.lineWidth = 2;
+        ctx.lineCap = "round";
+        ctx.strokeStyle = currentTool === "eraser" ? "#ffffff" : "#000000";
+
+        ctx.lineTo(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop);
+        ctx.stroke();
+       
+        ctx.moveTo(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop);
+    }
+
+    function selectTool(tool) {
+        currentTool = tool;
+    }
+
+    canvas.addEventListener("mousedown", startDrawing);
+    canvas.addEventListener("mousemove", draw);
+    canvas.addEventListener("mouseup", stopDrawing);
+    canvas.addEventListener("mouseout", stopDrawing);
+
+    document.getElementById("pencil").addEventListener("click", function () {
+        selectTool("pencil");
+    });
+
+    document.getElementById("eraser").addEventListener("click", function () {
+        selectTool("eraser");
+    });
+});
