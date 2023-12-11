@@ -279,8 +279,8 @@ p{
 /* draw garnae frame create gareko */
 
 .main-container{
-    width: auto;
-    /* height: calc(); */
+    width: 100%;
+    height: 100%;
     border: 10px solid white;
     background-color: #e5e5e5;
     cursor: crosshair;
