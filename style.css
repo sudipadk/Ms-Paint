@@ -1,0 +1,287 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+header {
+    width: 100vw;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+    /* Add this line to position the divs */
+
+    align-items: center;
+    /* Center items vertically in the header */
+
+    padding: 8px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+.nav ul li {
+    list-style: none;
+}
+
+.nav ul li a {
+    color: #07090d;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.right {
+    display: flex;
+    gap: 8px;
+    /* Add some gap between the icon and text */
+}
+
+.right i {
+    color: #07090d;
+    /* Adjust the color of the icon */
+}
+
+.navhead {
+    width: 100vw;
+    height: 100px;
+    display: flex;
+    background-color: aliceblue;
+    border: 1px solid rgba(128, 128, 128, 0.3);
+}
+
+.arrow {
+    margin-top: 4px;
+
+}
+
+.clipboard {
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 6%;
+    text-align: center;
+
+}
+
+
+.clipboard p {
+    /* padding: 4px; */
+    margin-bottom: 4px;
+}
+
+
+.clipboard button {
+    border: none;
+    cursor: pointer;
+}
+
+.selection {
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 6%;
+    text-align: center;
+
+}
+
+.selection p {
+    width: auto;
+    text-align: center;
+    margin-bottom: 4px;
+}
+
+.tools {
+    margin: 2px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 6%;
+    text-align: center;
+
+}
+
+.brush {
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 6%;
+    text-align: center;
+
+}
+
+.brush p {
+    /* padding: 4px; */
+    margin-bottom: 4px;
+    width: auto;
+    text-align: center;
+}
+
+
+.brush button {
+    border: none;
+    cursor: pointer;
+}
+
+
+.shapes {
+    /* margin: 2px; */
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 6%;
+    text-align: center;
+
+}
+
+.shapes p {
+    width: auto;
+    text-align: center;
+}
+
+.size {
+    /* margin: 2px; */
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 6%;
+    text-align: center;
+
+}
+
+.size p {
+    width: auto;
+    text-align: center;
+}
+
+.matrix-cell {
+    text-align: center;
+    flex: 1;
+}
+
+.icon-button {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+/* dropdown options in a buttons */
+
+.matrix-Clip {
+    display: none;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    position: absolute;
+    top: 19%;
+    left: 1%;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #000;
+}
+
+.matrix-select{
+    display: none;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    position: absolute;
+    top: 19%;
+    left: 7%;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #000;
+}
+
+.tools{
+    /* margin-top: 4px; */
+    width: 120px;
+    display: grid;
+    grid-template-columns: repeat(2,0fr);
+    grid-template-rows: repeat(2,0fr);
+    /* gap: 20px; */
+    color: black;
+}
+
+.tools .material-icons{
+    border: 1px solid rgba(0, 0, 0,0.2);
+    padding: 8px;
+    width: 48px;
+    height: 40px;
+}
+
+.matrix-brush {
+    display: none;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    position: absolute;
+    top: 19%;
+    left: 20%;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #000;
+}
+
+
+/* adding icons in a shape */
+
+.shapes{
+      margin-top: 4px;
+      width: 160px;
+      display: grid;
+      grid-template-columns: repeat(4,0fr);
+      grid-template-rows: repeat(2,0fr);
+      gap: 20px;
+      border: 2px solid #ccc;
+      /* border-radius: 8px; */
+      color: black;
+      overflow-x:hidden ;
+      overflow-y: scroll;
+}
+
+.matrix-size {
+    display: none;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    position: absolute;
+    top: 19%;
+    left: 32%;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #000;
+}
+
+/* color palette */
+
+.color-container {
+    margin-top: 4px;
+    width: 205px;
+    display: grid;
+    gap: 2px;
+    grid-template-columns: repeat(8,0fr);
+    grid-template-rows: repeat(3,0fr);
+    color: wheat;
+    transform: translateX(120px);
+    
+}
+p{
+    border: 1px solid white;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    /* gap: 5px; */
+    /* margin: 0px; */
+
+}
+
+
+/* draw garnae frame create gareko */
+
+.main-container{
+    width: auto;
+    height: 100vh;
+    border: 10px solid white;
+    background-color: white;
+    cursor: crosshair;
+
+}
