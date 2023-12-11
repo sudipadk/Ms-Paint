@@ -11,12 +11,9 @@ header {
     background-color: aliceblue;
     display: flex;
     justify-content: space-between;
-    /* Add this line to position the divs */
-
     align-items: center;
-    /* Center items vertically in the header */
-
     padding: 8px;
+    /* position: fixed; */
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
@@ -52,6 +49,7 @@ header {
     display: flex;
     background-color: aliceblue;
     border: 1px solid rgba(128, 128, 128, 0.3);
+    position: fixed;
 }
 
 .arrow {
@@ -282,9 +280,9 @@ p{
 
 .main-container{
     width: auto;
-    height: 100vh;
+    /* height: calc(); */
     border: 10px solid white;
-    background-color: white;
+    background-color: #e5e5e5;
     cursor: crosshair;
 
 }
