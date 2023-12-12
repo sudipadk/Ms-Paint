@@ -296,24 +296,30 @@ canvas {
 
 /* Basic styling for the footer */
 footer {
-    background-color: #F0F0F0;
-    border-top: 1px solid #E0E0E0;
-    color: #888;
+    background-color: #333; /* Set your desired footer background color */
+    color: white;
+    padding: 10px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.left {
+    display: flex;
     align-items: center;
-    padding: 10px 0;
-    font-size: 14px;
 }
 
-/* Styling for the links in the footer */
-footer a {
-    color: #888;
-    text-decoration: none;
+.left i {
+    margin-right: 5px;
 }
 
-/* Change the color of the link when hovering over it */
-footer a:hover {
-    color: #444;
-    text-decoration: underline;
+.right {
+    display: flex;
+    align-items: center;
+}
+
+.right button {
+    margin: 0 5px;
 }
