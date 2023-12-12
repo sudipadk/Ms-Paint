@@ -44,4 +44,23 @@ document.addEventListener("DOMContentLoaded", function () {
             fillWithColor(selectedColor);
         });
     });
+
+    // Get the range input element
+    const volumeRange = document.getElementById('volume');
+
+    // Get the zoom in and zoom out buttons
+    const zoomInBtn = document.getElementById('zoomInBtn');
+    const zoomOutBtn = document.getElementById('zoomOutBtn');
+
+    // Add event listener for zoom in button
+    zoomInBtn.addEventListener('click', function () {
+        // Increase the range value
+        volumeRange.value = Math.min(parseInt(volumeRange.value, 10) + 10, 100);
+    });
+
+    // Add event listener for zoom out button
+    zoomOutBtn.addEventListener('click', function () {
+        // Decrease the range value
+        volumeRange.value = Math.max(parseInt(volumeRange.value, 10) - 10, 0);
+    });
 });
