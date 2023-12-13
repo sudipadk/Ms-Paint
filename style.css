@@ -5,21 +5,24 @@
     font-family: sans-serif;
 }
 
-html{
-    background-color: #e5e5e5;
-
+body{
+    width: 100%;
 }
 
-
 header {
-    width: 100vw;
+ 
     background-color: aliceblue;
     display: flex;
-    position: fixed;
     justify-content: space-between;
+    /* Add this line to position the divs */
+
     align-items: center;
-    padding: 8px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    /* Center items vertically in the header */
+
+    padding: 16px;
+    padding-bottom: 8px;
+    height: 38px;
+   
 }
 
 .nav ul {
@@ -28,25 +31,51 @@ header {
 }
 
 .nav ul li {
-    list-style: none;
+    list-style: none; 
+    position: relative; /* Added this line to make positioning easier */
 }
 
 .nav ul li a {
-    color: #07090d;
-    font-weight: 400;
+    padding: 8px;
+    font-size: 14px;
+    color: #0d0a0b;
+    font-weight: 400px;
     text-decoration: none;
 }
 
+/* Added border-bottom to li elements on hover */
+.nav ul li:hover {
+    border-bottom: 2px solid #638ecbe2;
+}
+
 .right {
-    display: flex;
-    gap: 8px;
-    /* Add some gap between the icon and text */
+    position: absolute;
+    right: 1%;
+    
+}
+
+i{
+    color:#0d0a0bd0 ; /* Adjust the color of the icon */
 }
 
 .right i {
-    color: #07090d;
-    /* Adjust the color of the icon */
+    color: #0d0a0bd9;  /* Adjust the color of the contact support */
+    padding-bottom:20px; 
+   
 }
+
+.right i:hover{
+    border-bottom: 2px solid #638ecbe2; /* Add border-bottom to .right i on hover */
+}
+
+.topIcon{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+
+/*------- SUB NAV i.e tools haru vako thau---------- */
 
 .navhead {
     width: 100vw;
