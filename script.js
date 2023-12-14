@@ -63,12 +63,12 @@ document.addEventListener("DOMContentLoaded", function () {
     let scale = 1;
 
     function zoomIn() {
-        scale += 0.3;
+        scale += 0.1;
         applyZoom();
     }
 
     function zoomOut() {
-        scale -= 0.3;
+        scale -= 0.1;
         applyZoom();
     }
 
@@ -90,4 +90,19 @@ document.addEventListener("DOMContentLoaded", function () {
         ctx.fillStyle = color;
         ctx.fillRect(0, 0, canvas.width, canvas.height);
     }
+});
+
+
+let state= document.getElementById("status");
+
+let save = document.getElementById("save");
+
+save.addEventListener("click", (e) =>{
+    setInterval(() => {
+        state.innerHTML += "Saved Successfully";
+        
+    }, 2000);
+    
+    state.innerHTML += "Saved Successfully";
+    
 });
