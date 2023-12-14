@@ -5,12 +5,12 @@
     font-family: sans-serif;
 }
 
-body{
+body {
     width: 100%;
 }
 
 header {
- 
+
     background-color: aliceblue;
     display: flex;
     justify-content: space-between;
@@ -22,7 +22,6 @@ header {
     padding: 16px;
     padding-bottom: 8px;
     height: 38px;
-   
 }
 
 .nav ul {
@@ -31,8 +30,9 @@ header {
 }
 
 .nav ul li {
-    list-style: none; 
-    position: relative; /* Added this line to make positioning easier */
+    list-style: none;
+    position: relative;
+    /* Added this line to make positioning easier */
 }
 
 .nav ul li a {
@@ -51,27 +51,30 @@ header {
 .right {
     position: absolute;
     right: 1%;
-    
+
 }
 
-i{
-    color:#0d0a0bd0 ; /* Adjust the color of the icon */
+i {
+    color: #0d0a0bd0;
+    /* Adjust the color of the icon */
 }
 
 .right i {
-    color: #0d0a0bd9;  /* Adjust the color of the contact support */
-    padding-bottom:20px; 
-   
+    color: #0d0a0bd9;
+    /* Adjust the color of the contact support */
+    padding-bottom: 20px;
+
 }
 
-.right i:hover{
-    border-bottom: 2px solid #638ecbe2; /* Add border-bottom to .right i on hover */
+.right i:hover {
+    border-bottom: 2px solid #638ecbe2;
+    /* Add border-bottom to .right i on hover */
 }
 
-.topIcon{
+.topIcon {
     display: flex;
     justify-content: space-between;
-    
+
 }
 
 
@@ -83,8 +86,9 @@ i{
     display: flex;
     background-color: aliceblue;
     border: 1px solid rgba(128, 128, 128, 0.3);
-    position: fixed;
+    position: absolute;
 }
+
 
 .arrow {
     margin-top: 4px;
@@ -199,6 +203,7 @@ i{
     padding: 5px 10px;
     cursor: pointer;
 }
+
 /* dropdown options in a buttons */
 
 .matrix-Clip {
@@ -213,7 +218,7 @@ i{
     border: 1px solid #000;
 }
 
-.matrix-select{
+.matrix-select {
     display: none;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
@@ -225,28 +230,29 @@ i{
     border: 1px solid #000;
 }
 
-.tools{
+.tools {
     /* margin-top: 4px; */
     width: 120px;
     display: grid;
-    grid-template-columns: repeat(2,0fr);
-    grid-template-rows: repeat(2,0fr);
+    grid-template-columns: repeat(2, 0fr);
+    grid-template-rows: repeat(2, 0fr);
     /* gap: 20px; */
     color: black;
 }
 
-.tools i{
-    border: 1px solid rgba(0, 0, 0,0.2);
+.tools i {
+    border: 1px solid rgba(0, 0, 0, 0.2);
     padding: 8px;
     width: 48px;
     height: 40px;
-    
+
 }
 
-.bi-pencil{
+.bi-pencil {
     width: 28px;
     height: 28px;
 }
+
 .matrix-brush {
     display: none;
     grid-template-columns: repeat(3, 1fr);
@@ -262,18 +268,18 @@ i{
 
 /* adding icons in a shape */
 
-.shapes{
-      margin-top: 4px;
-      width: 160px;
-      display: grid;
-      grid-template-columns: repeat(4,0fr);
-      grid-template-rows: repeat(2,0fr);
-      gap: 20px;
-      border: 2px solid #ccc;
-      /* border-radius: 8px; */
-      color: black;
-      overflow-x:hidden ;
-      overflow-y: scroll;
+.shapes {
+    margin-top: 4px;
+    width: 160px;
+    display: grid;
+    grid-template-columns: repeat(4, 0fr);
+    grid-template-rows: repeat(2, 0fr);
+    gap: 20px;
+    border: 2px solid #ccc;
+    /* border-radius: 8px; */
+    color: black;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 .matrix-size {
@@ -295,18 +301,19 @@ i{
     width: 205px;
     display: grid;
     gap: 2px;
-    grid-template-columns: repeat(8,0fr);
-    grid-template-rows: repeat(3,0fr);
+    grid-template-columns: repeat(8, 0fr);
+    grid-template-rows: repeat(3, 0fr);
     color: wheat;
     transform: translateX(120px);
-    
+
 }
-.color-container p{
+
+.color-container p {
     border: 1px solid white;
     border-radius: 50%;
     width: 24px;
     height: 24px;
-    
+
 
 }
 
@@ -325,7 +332,8 @@ canvas {
 
 /* Basic styling for the footer */
 footer {
-    background-color: #333; /* Set your desired footer background color */
+    background-color: #333;
+    /* Set your desired footer background color */
     color: white;
     padding: 10px;
     display: flex;
@@ -345,10 +353,14 @@ footer {
 }
 
 .right {
+    margin-right: 80px;
     display: flex;
     align-items: center;
+    gap: 20px;
 }
 
 .right button {
     margin: 0 5px;
+    height: 24px;
+    width: 24px;
 }
