@@ -32,6 +32,8 @@ document.addEventListener("DOMContentLoaded", function () {
         isDrawing = true;
         startX = e.clientX - canvas.offsetLeft;
         startY = e.clientY - canvas.offsetTop;
+        ctx.beginPath();
+        ctx.moveTo(startX, startY);
     }
 
     function stopDrawing(e) {
@@ -43,20 +45,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function draw(e) {
         if (!isDrawing) return;
-        ctx.lineWidth = 2;
-        ctx.lineCap = "round";
-        ctx.strokeStyle = "black";
-
         ctx.lineTo(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop);
         ctx.stroke();
-
-        ctx.moveTo(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop);
     }
 
     function fillBetweenPoints(x1, y1, x2, y2) {
         ctx.fillStyle = "blue"; // Change the fill color as needed
-        ctx.beginPath();
-        ctx.moveTo(x1, y1);
         ctx.lineTo(x2, y2);
         ctx.lineTo(x2, canvas.height);
         ctx.lineTo(x1, canvas.height);
