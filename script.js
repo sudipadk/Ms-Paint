@@ -1,9 +1,12 @@
+
 document.addEventListener("DOMContentLoaded", function () {
     const clipboard = document.getElementById('clipboard');
     const tools = document.getElementById('tools');
     const brush = document.getElementById('brush');
     const shapes = document.getElementById('shapes');
     const size = document.getElementById('size');
+    const zoomInBtn = document.getElementById('zoomInBtn');
+    const zoomOutBtn = document.getElementById('zoomOutBtn');
 
     const matrixElements = {
         clipboard: document.getElementById("matrixClip"),
@@ -49,19 +52,29 @@ document.addEventListener("DOMContentLoaded", function () {
         ctx.stroke();
     }
 
-    function fillBetweenPoints(x1, y1, x2, y2) {
-        ctx.fillStyle = "blue"; // Change the fill color as needed
-        ctx.lineTo(x2, y2);
-        ctx.lineTo(x2, canvas.height);
-        ctx.lineTo(x1, canvas.height);
-        ctx.closePath();
-        ctx.fill();
-    }
-
     canvas.addEventListener("mousedown", startDrawing);
     canvas.addEventListener("mousemove", draw);
     canvas.addEventListener("mouseup", stopDrawing);
     canvas.addEventListener("mouseout", stopDrawing);
+
+    zoomInBtn.addEventListener('click', zoomIn);
+    zoomOutBtn.addEventListener('click', zoomOut);
+
+    let scale = 1;
+
+    function zoomIn() {
+        scale += 0.3;
+        applyZoom();
+    }
+
+    function zoomOut() {
+        scale -= 0.3;
+        applyZoom();
+    }
+
+    function applyZoom() {
+        canvas.style.transform = `scale(${scale})`;
+    }
 
     document.getElementById("pencil").addEventListener("click", () => selectTool("pencil"));
     document.getElementById("eraser").addEventListener("click", () => selectTool("eraser"));
