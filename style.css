@@ -107,7 +107,7 @@ i{
 }
 
 .clipboard:hover{
-    border: 1px solid #638ecbe2;
+    background-color: #638ecb26;
 }
 
 
@@ -121,162 +121,162 @@ i{
 
 .selection p {
     width: auto;
+    font-size: 14px;
     text-align: center;
-    margin-bottom: 4px;
+    margin-top: 8px;
 }
 
 .selection:hover{
-    border: 1px solid #638ecbe2;
-}
-
-.tools {
-    margin: 2px;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    width: 6%;
-    text-align: center;
-
-}
-
-.brush {
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    width: 6%;
-    text-align: center;
-
-}
-
-.brush p {
-    /* padding: 4px; */
-    margin-bottom: 4px;
-    width: auto;
-    text-align: center;
+    background-color: #638ecb26;
 }
 
 
-.brush button {
-    border: none;
-    cursor: pointer;
-}
-
-
-.shapes {
-    /* margin: 2px; */
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    width: 6%;
-    text-align: center;
-
-}
-
-.shapes p {
-    width: auto;
-    text-align: center;
-}
-
-.size {
-    /* margin: 2px; */
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    width: 6%;
-    text-align: center;
-
-}
-
-.size p {
-    width: auto;
-    text-align: center;
-}
-
-.matrix-cell {
-    text-align: center;
-    flex: 1;
-}
-
-.icon-button {
-    padding: 5px 10px;
-    cursor: pointer;
-}
-/* dropdown options in a buttons */
-
-.matrix-Clip {
-    display: none;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    position: absolute;
-    top: 19%;
-    left: 1%;
-    background-color: #fff;
-    padding: 10px;
-    border: 1px solid #000;
-}
-
-.matrix-select{
-    display: none;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    position: absolute;
-    top: 19%;
-    left: 7%;
-    background-color: #fff;
-    padding: 10px;
-    border: 1px solid #000;
-}
-
-.tools{
-    /* margin-top: 4px; */
+.tools{  
     width: 120px;
     display: grid;
+    cursor: pointer;
+    text-align: center;
     grid-template-columns: repeat(2,0fr);
     grid-template-rows: repeat(2,0fr);
-    /* gap: 20px; */
     color: black;
+    margin-left: 20px;
 }
 
 .tools i{
-    border: 1px solid rgba(0, 0, 0,0.2);
+
+    border: 1px solid #8080804d;
     padding: 8px;
     width: 48px;
     height: 40px;
     
 }
 
-.bi-pencil{
-    width: 28px;
-    height: 28px;
+.tools i:hover{
+    border: 1px solid #8dc0f0;
+    color: #8dc0f0;
 }
+
+.brush {
+    margin-right: 20px;
+    padding: 22px;
+    border: none;
+    cursor: pointer;
+    width: 6%;
+    text-align: center;
+}
+
+.brush p {
+    font-size: 14px;
+}
+
+.brush:hover{
+    background-color: #638ecb26;
+}
+
+/* brush menu */
+.icon-button {
+    padding: 8px 8px;
+    cursor: pointer;
+    background-color: rgb(240, 248, 255);
+    border: none;  
+}
+
+
+
+
+.icon-button:hover{
+    background-color: hwb(209 56% 6% / 0.251);
+}
+
+.icon-button i{
+    color: rgba(0, 0, 0, 0.921);
+}
+.icon-button i:hover{
+    color: #000000;
+}
+
+.shapes{
+    padding: 12px;
+    cursor: pointer;
+    margin: 2px;
+    width: 180px;
+    display: grid;
+    grid-template-columns: repeat(4,0fr);
+    grid-template-rows: repeat(2,0fr);
+    gap: 14px;
+    border: 1px solid #8080804d;
+    color: #0000003f;
+    overflow-x:hidden ;
+    overflow-y: scroll;
+}
+
+.shapes i:hover, i::selection{
+    color: #000000;
+}
+
+.size {
+    padding: 16px;
+    padding-top: 20px;
+    margin: 0px 8px;
+    border: none;
+    cursor: pointer;
+    width: 6%;
+    text-align: center;
+}
+
+.size p {
+    padding-top: 8px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.size:hover{
+    background-color: #638ecb26;
+}
+/* .matrix-cell {
+    text-align: center;
+    flex: 7;
+} */
+
+
+/* dropdown options (COPY & PASTE)*/
+
+matrix-cell{
+    padding: 10px 10px;
+    cursor: pointer;
+    background-color: rgb(34, 132, 217);
+    border: none; 
+}
+.matrix-Clip {
+    display: none;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    position: absolute;
+    top: 70%;
+    left: 3%;
+    background-color: #ffffff98;
+    padding: 10px;
+    border: 1px solid #80808085;
+    border-radius: 4px;
+}
+
 .matrix-brush {
     display: none;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    gap: 5px;
     position: absolute;
-    top: 19%;
-    left: 20%;
-    background-color: #fff;
+    top: 70%;
+    left: 25%;
+    background-color: #ffffff98;
     padding: 10px;
-    border: 1px solid #000;
+    border: 1px solid #80808085;
+    border-radius: 4px;
 }
 
 
 /* adding icons in a shape */
 
-.shapes{
-      margin-top: 4px;
-      width: 160px;
-      display: grid;
-      grid-template-columns: repeat(4,0fr);
-      grid-template-rows: repeat(2,0fr);
-      gap: 20px;
-      border: 2px solid #ccc;
-      /* border-radius: 8px; */
-      color: black;
-      overflow-x:hidden ;
-      overflow-y: scroll;
-}
+
 
 .matrix-size {
     display: none;
