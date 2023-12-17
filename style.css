@@ -290,6 +290,15 @@ i{
 
 /* color palette */
 
+.select-color{
+    border: 1px solid black;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-top: 30px;
+    transform: translateX(10px);
+}
+
 .color-container {
     margin-top: 10px;
     width: 205px;
@@ -298,7 +307,7 @@ i{
     grid-template-columns: repeat(8,0fr);
     grid-template-rows: repeat(3,0fr);
     color: wheat;
-    transform: translateX(120px);
+    transform: translateX(40px);
     
 }
 .color-container p{
