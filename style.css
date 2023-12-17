@@ -181,9 +181,6 @@ i{
     border: none;  
 }
 
-
-
-
 .icon-button:hover{
     background-color: hwb(209 56% 6% / 0.251);
 }
@@ -211,7 +208,8 @@ i{
 }
 
 .shapes i:hover, i::selection{
-    color: #000000;
+    color: rgb(65, 65, 65);
+    background-color: #8dc0f06d;
 }
 
 .size {
@@ -233,33 +231,36 @@ i{
 .size:hover{
     background-color: #638ecb26;
 }
-/* .matrix-cell {
-    text-align: center;
-    flex: 7;
-} */
-
 
 /* dropdown options (COPY & PASTE)*/
 
-matrix-cell{
-    padding: 10px 10px;
+#button {
+    padding: 8px 8px;
     cursor: pointer;
-    background-color: rgb(34, 132, 217);
-    border: none; 
+    background-color: rgb(240, 248, 255);
+    border: none;
 }
+
+#button:hover{
+    background-color: hwb(209 56% 6% / 0.251);
+}
+
 .matrix-Clip {
     display: none;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     position: absolute;
     top: 70%;
-    left: 3%;
+    left: 2%;
     background-color: #ffffff98;
     padding: 10px;
     border: 1px solid #80808085;
     border-radius: 4px;
+    font-size: 12px;
+    text-align: center;
 }
 
+/* dropdown options (BRUSH)*/
 .matrix-brush {
     display: none;
     grid-template-columns: repeat(3, 1fr);
@@ -275,9 +276,6 @@ matrix-cell{
 
 
 /* adding icons in a shape */
-
-
-
 .matrix-size {
     display: none;
     grid-template-columns: repeat(3, 1fr);
