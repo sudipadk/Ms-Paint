@@ -5,12 +5,12 @@
     font-family: sans-serif;
 }
 
-body {
+body{
     width: 100%;
 }
 
 header {
-
+   
     background-color: aliceblue;
     display: flex;
     justify-content: space-between;
@@ -22,6 +22,7 @@ header {
     padding: 16px;
     padding-bottom: 8px;
     height: 38px;
+   
 }
 
 .nav ul {
@@ -30,9 +31,8 @@ header {
 }
 
 .nav ul li {
-    list-style: none;
-    position: relative;
-    /* Added this line to make positioning easier */
+    list-style: none; 
+    position: relative; /* Added this line to make positioning easier */
 }
 
 .nav ul li a {
@@ -51,30 +51,27 @@ header {
 .right {
     position: absolute;
     right: 1%;
-
+    
 }
 
-i {
-    color: #0d0a0bd0;
-    /* Adjust the color of the icon */
+i{
+    color:#0d0a0bd0 ; /* Adjust the color of the icon */
 }
 
 .right i {
-    color: #0d0a0bd9;
-    /* Adjust the color of the contact support */
-    padding-bottom: 20px;
-
+    color: #0d0a0bd9;  /* Adjust the color of the contact support */
+    padding-bottom:20px; 
+   
 }
 
-.right i:hover {
-    border-bottom: 2px solid #638ecbe2;
-    /* Add border-bottom to .right i on hover */
+.right i:hover{
+    border-bottom: 2px solid #638ecbe2; /* Add border-bottom to .right i on hover */
 }
 
-.topIcon {
+.topIcon{
     display: flex;
     justify-content: space-between;
-
+    
 }
 
 
@@ -84,41 +81,38 @@ i {
     width: 100vw;
     height: 100px;
     display: flex;
-    background-color: aliceblue;
-    border: 1px solid rgba(128, 128, 128, 0.3);
-    position: absolute;
+    background-color:aliceblue;
+    border: 1px solid #8080804d;
+    position: fixed;
 }
 
 
-.arrow {
-    margin-top: 4px;
-
+.arrow i:hover {
+    color: #638ecbe2;
 }
+
 
 .clipboard {
-    padding: 10px;
+    padding: 20px;
     border: none;
     cursor: pointer;
-    width: 6%;
+    width: 8%;
     text-align: center;
 
 }
 
 
 .clipboard p {
-    /* padding: 4px; */
-    margin-bottom: 4px;
+   font-size: 14px;
 }
 
-
-.clipboard button {
-    border: none;
-    cursor: pointer;
+.clipboard:hover{
+    background-color: #638ecb26;
 }
+
 
 .selection {
-    padding: 10px;
-    border: none;
+    padding: 20px;
     cursor: pointer;
     width: 6%;
     text-align: center;
@@ -127,161 +121,161 @@ i {
 
 .selection p {
     width: auto;
+    font-size: 14px;
     text-align: center;
-    margin-bottom: 4px;
+    margin-top: 8px;
 }
 
-.tools {
-    margin: 2px;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    width: 6%;
-    text-align: center;
-
-}
-
-.brush {
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    width: 6%;
-    text-align: center;
-
-}
-
-.brush p {
-    /* padding: 4px; */
-    margin-bottom: 4px;
-    width: auto;
-    text-align: center;
+.selection:hover{
+    background-color: #638ecb26;
 }
 
 
-.brush button {
-    border: none;
-    cursor: pointer;
-}
-
-
-.shapes {
-    /* margin: 2px; */
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    width: 6%;
-    text-align: center;
-
-}
-
-.shapes p {
-    width: auto;
-    text-align: center;
-}
-
-.size {
-    /* margin: 2px; */
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    width: 6%;
-    text-align: center;
-
-}
-
-.size p {
-    width: auto;
-    text-align: center;
-}
-
-.matrix-cell {
-    text-align: center;
-    flex: 1;
-}
-
-.icon-button {
-    padding: 5px 10px;
-    cursor: pointer;
-}
-
-/* dropdown options in a buttons */
-
-.matrix-Clip {
-    display: none;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    position: absolute;
-    top: 19%;
-    left: 1%;
-    background-color: #fff;
-    padding: 10px;
-    border: 1px solid #000;
-}
-
-.matrix-select {
-    display: none;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    position: absolute;
-    top: 19%;
-    left: 7%;
-    background-color: #fff;
-    padding: 10px;
-    border: 1px solid #000;
-}
-
-.tools {
-    /* margin-top: 4px; */
+.tools{  
     width: 120px;
     display: grid;
-    grid-template-columns: repeat(2, 0fr);
-    grid-template-rows: repeat(2, 0fr);
-    /* gap: 20px; */
+    cursor: pointer;
+    text-align: center;
+    grid-template-columns: repeat(2,0fr);
+    grid-template-rows: repeat(2,0fr);
     color: black;
+    margin-left: 20px;
 }
 
-.tools i {
-    border: 1px solid rgba(0, 0, 0, 0.2);
+.tools i{
+
+    border: 1px solid #8080804d;
     padding: 8px;
     width: 48px;
     height: 40px;
-
+    
 }
 
-.bi-pencil {
-    width: 28px;
-    height: 28px;
+.tools i:hover{
+    border: 1px solid #8dc0f0;
+    color: #8dc0f0;
 }
 
+.brush {
+    margin-right: 20px;
+    padding: 22px;
+    border: none;
+    cursor: pointer;
+    width: 6%;
+    text-align: center;
+}
+
+.brush p {
+    font-size: 14px;
+}
+
+.brush:hover{
+    background-color: #638ecb26;
+}
+
+/* brush menu */
+.icon-button {
+    padding: 8px 8px;
+    cursor: pointer;
+    background-color: rgb(240, 248, 255);
+    border: none;  
+}
+
+.icon-button:hover{
+    background-color: hwb(209 56% 6% / 0.251);
+}
+
+.icon-button i{
+    color: rgba(0, 0, 0, 0.921);
+}
+.icon-button i:hover{
+    color: #000000;
+}
+
+.shapes{
+    padding: 12px;
+    cursor: pointer;
+    margin: 2px;
+    width: 180px;
+    display: grid;
+    grid-template-columns: repeat(4,0fr);
+    grid-template-rows: repeat(2,0fr);
+    gap: 14px;
+    border: 1px solid #8080804d;
+    color: #0000003f;
+    overflow-x:hidden ;
+    overflow-y: scroll;
+}
+
+.shapes i:hover, i::selection{
+    color: rgb(65, 65, 65);
+    background-color: #8dc0f06d;
+}
+
+.size {
+    padding: 16px;
+    padding-top: 20px;
+    margin: 0px 8px;
+    border: none;
+    cursor: pointer;
+    width: 6%;
+    text-align: center;
+}
+
+.size p {
+    padding-top: 8px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.size:hover{
+    background-color: #638ecb26;
+}
+
+/* dropdown options (COPY & PASTE)*/
+
+#button {
+    padding: 8px 8px;
+    cursor: pointer;
+    background-color: rgb(240, 248, 255);
+    border: none;
+}
+
+#button:hover{
+    background-color: hwb(209 56% 6% / 0.251);
+}
+
+.matrix-Clip {
+    display: none;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    position: absolute;
+    top: 70%;
+    left: 2%;
+    background-color: #ffffff98;
+    padding: 10px;
+    border: 1px solid #80808085;
+    border-radius: 4px;
+    font-size: 12px;
+    text-align: center;
+}
+
+/* dropdown options (BRUSH)*/
 .matrix-brush {
     display: none;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    gap: 5px;
     position: absolute;
-    top: 19%;
-    left: 20%;
-    background-color: #fff;
+    top: 70%;
+    left: 25%;
+    background-color: #ffffff98;
     padding: 10px;
-    border: 1px solid #000;
+    border: 1px solid #80808085;
+    border-radius: 4px;
 }
 
 
 /* adding icons in a shape */
-
-.shapes {
-    margin-top: 4px;
-    width: 160px;
-    display: grid;
-    grid-template-columns: repeat(4, 0fr);
-    grid-template-rows: repeat(2, 0fr);
-    gap: 20px;
-    border: 2px solid #ccc;
-    /* border-radius: 8px; */
-    color: black;
-    overflow-x: hidden;
-    overflow-y: scroll;
-}
-
 .matrix-size {
     display: none;
     grid-template-columns: repeat(3, 1fr);
@@ -296,24 +290,32 @@ i {
 
 /* color palette */
 
+.select-color{
+    border: 1px solid black;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-top: 30px;
+    transform: translateX(10px);
+}
+
 .color-container {
     margin-top: 10px;
     width: 205px;
     display: grid;
     gap: 2px;
-    grid-template-columns: repeat(8, 0fr);
-    grid-template-rows: repeat(3, 0fr);
+    grid-template-columns: repeat(8,0fr);
+    grid-template-rows: repeat(3,0fr);
     color: wheat;
-    transform: translateX(120px);
-
+    transform: translateX(40px);
+    
 }
-
-.color-container p {
+.color-container p{
     border: 1px solid white;
     border-radius: 50%;
     width: 24px;
     height: 24px;
-
+    
 
 }
 
@@ -332,8 +334,7 @@ canvas {
 
 /* Basic styling for the footer */
 footer {
-    background-color: #333;
-    /* Set your desired footer background color */
+    background-color: #333; /* Set your desired footer background color */
     color: white;
     padding: 10px;
     display: flex;
@@ -353,14 +354,10 @@ footer {
 }
 
 .right {
-    margin-right: 80px;
     display: flex;
     align-items: center;
-    gap: 20px;
 }
 
 .right button {
     margin: 0 5px;
-    height: 24px;
-    width: 24px;
 }

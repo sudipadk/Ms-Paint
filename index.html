@@ -16,7 +16,6 @@
 
 <body>
     <!-- creating a navbar  -->
-     <!-- creating a navbar  -->
      <header>
         <div class="nav">
             <ul>
@@ -35,188 +34,173 @@
     </header>
 
 
+    <!------------------------------------------- MENU--------------------------------->
     <div class="navhead">
+
+
+        <!--------- CLIPBOARD --------------->
         <div class="clipboard" id="clipboard">
-            <i class="material-icons">content_paste</i>
+            <i class="material-symbols-outlined">content_paste</i>
             <div class="arrow">
                 <i class="material-icons">arrow_drop_down</i>
             </div>
             <p>Clipboard</p>
         </div>
+
+            <!-- INSIDE CLIPBOARD COPY -->
         <div class="matrix-Clip" id="matrixClip">
             <div class="matrix-cell">
-                <button class="icon-button">Icon 1</button>
+                <button class="material-symbols-outlined" id="button">
+                    content_copy
+                    </button>
+                   <p>Copy</p>
             </div>
+
+            <!-- INSIDE CLIPBOARD PASTE -->
             <div class="matrix-cell">
-                <button class="icon-button">Icon 2</button>
-            </div>
-            <div class="matrix-cell">
-                <button class="icon-button">Icon 3</button>
-            </div>
-            <div class="matrix-cell">
-                <button class="icon-button">Icon 4</button>
-            </div>
-            <div class="matrix-cell">
-                <button class="icon-button">Icon 5</button>
-            </div>
-            <div class="matrix-cell">
-                <button class="icon-button">Icon 6</button>
-            </div>
+                <button id="button" class="material-symbols-outlined" >
+                    content_paste_go
+                </button>
+                <p>Paste</p>
+            </div> 
         </div>
 
+
+        <!------- CROP --------->
         <div class="selection">
             <i class="material-icons">crop</i>
-            <div class="arrow">
-                <i class="material-icons">arrow_drop_down</i>
-            </div>
-            <p>Select</p>
-        </div>
-        <div class="matrix-select" id="matrixselect">
-            <div class="matrix-cell">
-                <button class="icon-button">Icon 1</button>
-            </div>
-            <div class="matrix-cell">
-                <button class="icon-button">Icon 2</button>
-            </div>
-            <div class="matrix-cell">
-                <button class="icon-button">Icon 3</button>
-            </div>
-            <div class="matrix-cell">
-                <button class="icon-button">Icon 4</button>
-            </div>
-            <div class="matrix-cell">
-                <button class="icon-button">Icon 5</button>
-            </div>
-            <div class="matrix-cell">
-                <button class="icon-button">Icon 6</button>
-            </div>
+            <p>Crop</p>
         </div>
 
+
+        <!--------- TOOL MENU ----------->
         <div class="tools" id="tools">
-            <i class="bi bi-pencil"></i>
-            <i class="bi bi-paint-bucket"></i>
-            <i class="bi bi-fonts"></i>
-            <i class="bi bi-eraser"></i>
-
+            <i class="material-symbols-outlined">edit</i>
+            <i class="material-symbols-outlined">colors</i>
+            <i class="material-symbols-outlined">title</i>
+            <i class="material-symbols-outlined">ink_eraser</i>   
         </div>
 
+        <!--------------- BRUSH --------------->
         <div class="brush" id="brush">
-            <i class="material-icons">brush </i>
+            <i class="material-symbols-outlined">brush</i>
             <div class="arrow">
                 <i class="material-icons">arrow_drop_down</i>
             </div>
             <p>Brush</p>
         </div>
+
         <div class="matrix-brush" id="matrixbrush">
-            <div class="matrix-cell">
-                <button class="icon-button">Icon 1</button>
+
+             <!-- BRUSH 1 -->
+            <div class="matrix-Cell">
+                <button class="icon-button">
+                    <i class="material-symbols-outlined">format_paint</i>
+                </button>
             </div>
-            <div class="matrix-cell">
-                <button class="icon-button">Icon 2</button>
+
+             <!-- BRUSH 2 -->
+            <div class="matrix-Cell">
+                <button class="icon-button">
+                    <i class="material-symbols-outlined">imagesearch_roller</i>
+                </button>
             </div>
-            <div class="matrix-cell">
-                <button class="icon-button">Icon 3</button>
+
+            <!-- BRUSH 3 -->
+            <div class="matrix-Cell">
+                <button class="icon-button">
+                    <i class="material-symbols-outlined">ink_highlighter</i>
+                </button>
             </div>
-            <div class="matrix-cell">
-                <button class="icon-button">Icon 4</button>
-            </div>
-            <div class="matrix-cell">
-                <button class="icon-button">Icon 5</button>
-            </div>
-            <div class="matrix-cell">
-                <button class="icon-button">Icon 6</button>
-            </div>
+
         </div>
 
+
+        <!-------------- SHAPE --------------->
         <div class="shapes" id="shapes">
-            <i class="bi bi-triangle shape" id="triangle"></i>
-            <i class="bi bi-circle shape" id="circle"></i>
-            <i class="bi bi-square shape" id="square"></i>
-            <i class="bi bi-diamond shape" id="diamond"></i>
-            <i class="bi bi-pentagon shape" id="pentagon"></i>
-            <i class="bi bi-star shape" id="star"></i>
-            <i class="bi bi-arrow-up shape" id="arrow-up"></i>
-            <i class="bi bi-arrow-left shape" id="arrow-left"></i>
-            <i class="bi bi-arrow-right shape" id="arrow-right"></i>
-            <i class="bi bi-arrow-down shape" id="arrow-down"></i>
+           
+            <i class="material-symbols-outlined">pen_size_2</i>
+            <i class="material-symbols-outlined">rectangle</i>
+            <i class="material-symbols-outlined">check_box_outline_blank</i>
+            <i class="material-symbols-outlined">circle</i>
+            
+         
+            <i class="material-symbols-outlined"> change_history</i>
+            <i class="material-symbols-outlined">chat_bubble</i>
+            <i class="material-symbols-outlined">pentagon</i>
+            <i class="material-symbols-outlined">favorite</i>
+
+            <i class="material-symbols-outlined">north</i>
+            <i class="material-symbols-outlined">west</i>
+            <i class="material-symbols-outlined">east</i>
+            <i class="material-symbols-outlined">south</i>
+                 
         </div>
 
         <div class="size" id="size">
-            <i class="material-icons">zoom_in</i>
-            <div class="arrow">
-                <i class="material-icons">arrow_drop_down</i>
-            </div>
-            <p>Size</p>
+            <i class="material-symbols-outlined">search</i>
+            <p>Magnify</p>
         </div>
-        <div class="matrix-size" id="matrixsize">
-            <div class="matrix-cell">
-                <button class="icon-button">Icon 1</button>
-            </div>
-            <div class="matrix-cell">
-                <button class="icon-button">Icon 2</button>
-            </div>
-            <div class="matrix-cell">
-                <button class="icon-button">Icon 3</button>
-            </div>
-            <div class="matrix-cell">
-                <button class="icon-button">Icon 4</button>
-            </div>
-            <div class="matrix-cell">
-                <button class="icon-button">Icon 5</button>
-            </div>
-            <div class="matrix-cell">
-                <button class="icon-button">Icon 6</button>
-            </div>
-        </div>
+        
         <!-- color palette -->
+        <div class="select-color"> </div>
+        
         <div class="color-container">
-            <p style="background-color: red;"></p>
-            <p style="background-color: green;"></p>
-            <p style="background-color: lime;"></p>
-            <p style="background-color: blue;"></p>
-            <p style="background-color: yellow;"></p>
-            <p style="background-color: brown;"></p>
-            <p style="background-color: black;"></p>
-            <p style="background-color: whitesmoke;"></p>
-            <p style="background-color: orange;"></p>
-            <p style="background-color: grey;"></p>
-            <p style="background-color: goldenrod;"></p>
-            <p style="background-color: pink;"></p>
-            <p style="background-color: blanchedalmond;"></p>
-            <p style="background-color: wheat;"></p>
-            <p style="background-color: coral"></p>
-            <p style="background-color: aqua;"></p>
-            <p style="background-color: skyblue;"></p>
-            <p style="background-color: fuchsia;"></p>
-            <p style="background-color: gold;"></p>
-            <p style="background-color: crimson;"></p>
-            <p style="background-color: palegreen;"></p>
-            <p style="background-color: teal;"></p>
-            <p style="background-color: blueviolet;"></p>
-            <p style="background-color: khaki;"></p>
+            <p style="background-color: black;" class="color" id="black"></p>
+            <p style="background-color: grey;" class="color" id="grey"></p>
+            <p style="background-color: brown;" class="color" id="brown"></p>
+            <p style="background-color: red;" class="color" id="red"></p>
+            <p style="background-color: orange;" class="color" id="orange"></p>
+            <p style="background-color: yellow;" class="color" id="yellow"></p>
+            <p style="background-color: limegreen;" class="color" id="limegreen"></p>
+            <p style="background-color: teal;" class="color" id="teal"></p>
+            <p style="background-color: white;" class="color" id="white"></p>
+            <p style="background-color: #cbcbcb;" class="color" id="#cbcbcb"></p>
+            <p style="background-color: rgb(222, 184, 114);" class="color" id="rgb(222, 184, 114)"></p>
+            <p style="background-color: pink;" class="color" id="pink"></p>
+            <p style="background-color: gold;" class="color" id="gold"></p>
+            <p style="background-color: khaki;" class="color" id="khaki"></p>
+            <p style="background-color: rgb(101, 248, 101);" class="color" id="rgb(101, 248, 101)"></p>
+            <p style="background-color: #24bebe;" class="color" id="#24bebe"></p>
+            <p style="background-color: #cef7f7;" class="color" id="#cef7f7"></p>
+            <p style="background-color: lightskyblue;" class="color" id="lightskyblue"></p>
+            <p style="background-color: blue;" class="color" id="blue"></p>
+            <p style="background-color: #eb87d9;" class="color" id="#eb87d9"></p>
+            <p style="background-color: fuchsia;" class="color" id="fuchsia"></p>
+            <p style="background-color: blueviolet;" class="color" id="blueviolet"></p>
+            <p style="background-color: purple;" class="color" id="purple"></p>
+            <p style="background-color: coral" class="color" id="coral"></p>           
 
         </div>
+
     </div>
 
+
+    <div class="main-container">
+        
+    </div>
     <canvas id="drawingCanvas" width="1516" height="800"></canvas>
 
 
-    <!-- footer created -->
-    <footer>
+<!-- footer created -->
+
+<footer>
         <div class="left">
             <i class="material-icons">arrow_selector_tool</i>
             <p>status:</p>
+
         </div>
         <div class="right">
-            <button id="zoomOutBtn"> <i class="material-icons">zoom_out</i></button>
-            <!-- <input type="range" id="volume" name="volume" min="0" max="100" /> -->
-            <button id="zoomInBtn"> <i class="material-icons">zoom_in</i></button>
+            <button> <i class="material-icons">zoom_out</i></button>
+            <input type="range" id="volume" name="volume" min="0" max="100" />
+            <button> <i class="material-icons">zoom_in</i></button>
         </div>
-    </footer>
+
+</footer>
 
 </body>
 <script src="script.js"></script>
-<script src="shapes.js"></script>
+<script src="selectColor.js"></script>
 
 
 </html>

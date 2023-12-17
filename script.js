@@ -1,12 +1,9 @@
-
 document.addEventListener("DOMContentLoaded", function () {
     const clipboard = document.getElementById('clipboard');
     const tools = document.getElementById('tools');
     const brush = document.getElementById('brush');
     const shapes = document.getElementById('shapes');
     const size = document.getElementById('size');
-    const zoomInBtn = document.getElementById('zoomInBtn');
-    const zoomOutBtn = document.getElementById('zoomOutBtn');
 
     const matrixElements = {
         clipboard: document.getElementById("matrixClip"),
@@ -35,8 +32,6 @@ document.addEventListener("DOMContentLoaded", function () {
         isDrawing = true;
         startX = e.clientX - canvas.offsetLeft;
         startY = e.clientY - canvas.offsetTop;
-        ctx.beginPath();
-        ctx.moveTo(startX, startY);
     }
 
     function stopDrawing(e) {
@@ -48,33 +43,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function draw(e) {
         if (!isDrawing) return;
+        ctx.lineWidth = 2;
+        ctx.lineCap = "round";
+        ctx.strokeStyle = "black";
+
         ctx.lineTo(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop);
         ctx.stroke();
+
+        ctx.moveTo(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop);
+    }
+
+    function fillBetweenPoints(x1, y1, x2, y2) {
+        ctx.fillStyle = "blue"; // Change the fill color as needed
+        ctx.beginPath();
+        ctx.moveTo(x1, y1);
+        ctx.lineTo(x2, y2);
+        ctx.lineTo(x2, canvas.height);
+        ctx.lineTo(x1, canvas.height);
+        ctx.closePath();
+        ctx.fill();
     }
 
     canvas.addEventListener("mousedown", startDrawing);
     canvas.addEventListener("mousemove", draw);
     canvas.addEventListener("mouseup", stopDrawing);
     canvas.addEventListener("mouseout", stopDrawing);
-
-    zoomInBtn.addEventListener('click', zoomIn);
-    zoomOutBtn.addEventListener('click', zoomOut);
-
-    let scale = 1;
-
-    function zoomIn() {
-        scale += 0.1;
-        applyZoom();
-    }
-
-    function zoomOut() {
-        scale -= 0.1;
-        applyZoom();
-    }
-
-    function applyZoom() {
-        canvas.style.transform = `scale(${scale})`;
-    }
 
     document.getElementById("pencil").addEventListener("click", () => selectTool("pencil"));
     document.getElementById("eraser").addEventListener("click", () => selectTool("eraser"));
@@ -90,19 +83,4 @@ document.addEventListener("DOMContentLoaded", function () {
         ctx.fillStyle = color;
         ctx.fillRect(0, 0, canvas.width, canvas.height);
     }
-});
-
-
-let state= document.getElementById("status");
-
-let save = document.getElementById("save");
-
-save.addEventListener("click", (e) =>{
-    setInterval(() => {
-        state.innerHTML += "Saved Successfully";
-        
-    }, 2000);
-    
-    state.innerHTML += "Saved Successfully";
-    
 });
