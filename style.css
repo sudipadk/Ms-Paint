@@ -207,7 +207,7 @@ i{
     overflow-y: scroll;
 }
 
-.shapes i:hover, i::selection{
+.shapes i:hover, i:active{
     color: rgb(65, 65, 65);
     background-color: #8dc0f06d;
 }
@@ -299,6 +299,10 @@ i{
     transform: translateX(10px);
 }
 
+.select-color:active{
+    border: 1.5px solid #00dd17;
+}
+
 .color-container {
     margin-top: 10px;
     width: 205px;
@@ -310,13 +314,20 @@ i{
     transform: translateX(40px);
     
 }
+
+.color-container p:active{
+    border: 1.5px solid #00dd17;
+}
+
+.color-container p:hover{
+    border: 1.5px solid #009dffa8;
+}
+
 .color-container p{
     border: 1px solid white;
     border-radius: 50%;
     width: 24px;
     height: 24px;
-    
-
 }
 
 
@@ -334,8 +345,8 @@ canvas {
 
 /* Basic styling for the footer */
 footer {
-    background-color: #333; /* Set your desired footer background color */
-    color: white;
+    background-color: #4691e62d; /* Set your desired footer background color */
+    color: rgb(86, 86, 86);
     padding: 10px;
     display: flex;
     justify-content: space-between;
